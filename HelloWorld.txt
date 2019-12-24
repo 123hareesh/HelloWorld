@@ -1,0 +1,28 @@
+import java.util.Scanner;
+class ArmStrong
+{
+    public static void main(String args[])
+    {
+        int num,reverse=0,temp;
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter the number");
+        num=sc.nextInt();
+        temp=num;
+        System.out.println("expected output");
+        while(num!=0)
+        {
+            int digit=num%10;
+            reverse=reverse+(digit*digit*digit);
+            num=num/10;
+        }
+        if(temp == reverse)
+        {
+            System.out.println("armstrong");
+        }
+        else
+        {
+            System.out.println("not armstrong");
+        }
+        
+    }
+}
